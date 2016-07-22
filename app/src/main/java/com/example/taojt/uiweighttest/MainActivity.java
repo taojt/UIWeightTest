@@ -7,12 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
     private EditText editText;
     private ImageView imageView;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,15 +23,27 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         editText = (EditText) findViewById(R.id.edit_text);
         imageView = (ImageView) findViewById(R.id.image_view);
+        progressBar = (ProgressBar) findViewById(R.id.process_bar);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //点击事件
 //                Toast.makeText(MainActivity.this,"You clicked this button !", Toast.LENGTH_SHORT).show();
-
+//              Toast EditText 控件中的信息
 //                String message = editText.getText().toString();
 //                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                // 更换imageView 的图片
+//                imageView.setImageResource(R.mipmap.jelly_bean);
 
-                imageView.setImageResource(R.mipmap.jelly_bean);
+                // 设置进度条的可见性
+                if(progressBar.getVisibility() == View.GONE){
+                    progressBar.setVisibility(View.VISIBLE);
+                }else {
+                    progressBar.setVisibility(View.GONE);
+                }
+
 
             }
         });
