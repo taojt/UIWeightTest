@@ -1,5 +1,7 @@
 package com.example.taojt.uiweighttest;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -44,9 +46,29 @@ public class MainActivity extends AppCompatActivity {
 //                    progressBar.setVisibility(View.GONE);
 //                }
                 // 改进度条为线性进度条，并且更改进度条进度
-                int progress = progressBar.getProgress();
-                progress += 10;
-                progressBar.setProgress(progress);
+//                int progress = progressBar.getProgress();
+//                progress += 10;
+//                progressBar.setProgress(progress);
+                // AlertDialog
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                dialog.setTitle("This is a title");
+                dialog.setIcon(R.mipmap.jelly_bean);
+                dialog.setMessage("Something Important.");
+                dialog.setCancelable(false);
+                dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                dialog.show();
 
 
 
