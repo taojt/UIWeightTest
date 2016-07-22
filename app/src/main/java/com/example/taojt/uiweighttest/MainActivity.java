@@ -38,11 +38,16 @@ public class MainActivity extends AppCompatActivity {
 //                imageView.setImageResource(R.mipmap.jelly_bean);
 
                 // 设置进度条的可见性
-                if(progressBar.getVisibility() == View.GONE){
-                    progressBar.setVisibility(View.VISIBLE);
-                }else {
-                    progressBar.setVisibility(View.GONE);
-                }
+//                if(progressBar.getVisibility() == View.GONE){
+//                    progressBar.setVisibility(View.VISIBLE);
+//                }else {
+//                    progressBar.setVisibility(View.GONE);
+//                }
+                // 改进度条为线性进度条，并且更改进度条进度
+                int progress = progressBar.getProgress();
+                progress += 10;
+                progressBar.setProgress(progress);
+
 
 
             }

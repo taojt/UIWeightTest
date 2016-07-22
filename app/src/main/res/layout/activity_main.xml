@@ -42,6 +42,9 @@
     <ProgressBar
         android:id="@+id/process_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:paddingTop="@dimen/activity_vertical_margin"/>
 
 </LinearLayout>
